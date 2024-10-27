@@ -1,119 +1,105 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
-<title>ALI</title>
-
-<style>
-
-body{
-background:#F7F7F7;
-font-family:arial;
-}
-h1{
-text-align:center;
-font-weight:700;
-margin:0 auto;
-}
-form{
-width:70%;
-margin:auto;
-padding:2px 10px 40px 10px;
-
-background:white;
-}
-label{
-display:block;
-margin:10px;
-font-size:13px;
-} 
-input{
-margin:0 0 0 15px;
-padding:15px;
-width:90%;
-border:none;
-background:#F7F7F7;
-border-radius:4px;
-}
-p{
-color:gray;
-font-size;
-margin:10px;
-line-height:17px;
-font-size:13px;
-}
-.month,.day,.year{
-width:30%;
-margin:0 0 0 2px;
-display:inline;
-}
-.year{
-width:30%
-}
-.day{
-width:30%;
-}
-button{
-border:none;
-background:#0FADFF;
-margin:auto;
-display:block;
-color:white;
-padding:10px;
-border-radius:30px;
-}
-.down{
-color:#5AC9FF;
-text-decoration:none;
-}
-.already{
-font-size:13px;
-}
-img{
-width:15%;
-margin: auto;
-display:block;
-
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <style>
+        body {
+            background: #F7F7F7;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            text-align: center;
+            font-weight: 700;
+            margin: 20px 0;
+        }
+        form {
+            width: 70%;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 14px;
+        }
+        input {
+            margin: 0 0 15px;
+            padding: 15px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        p {
+            color: gray;
+            margin: 10px 0;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        .button-container {
+            text-align: center;
+        }
+        button {
+            border: none;
+            background: #0FADFF;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .already {
+            font-size: 13px;
+            text-align: center;
+        }
+        .down {
+            color: #5AC9FF;
+            text-decoration: none;
+        }
+        img {
+            width: 15%;
+            margin: 20px auto;
+            display: block;
+        }
+    </style>
 </head>
 <body>
- <form>
-<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7SZ-FjFRMDDOpLhYP4-oSqt19AzVRzQ_0fw&s'>
-<h1>Sign Up</h1>
-<label>
-First Name
-</label>
-<input placeholder='Enter your first name' type='text'>
-<label>
-Last Nmae
-</label>
-<input placeholder='Enter your last name' type='text'>
-<label>
-Username
-</label>
-<input placeholder='Enter your username' type='text'>
-<label>
-Email
-</label>
-<input placeholder='Enter your email' type='text'>
-<label>
-Password
-</label>
-<input placeholder='Enter your password' type='text'>
+    <form>
+        <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7SZ-FjFRMDDOpLhYP4-oSqt19AzVRzQ_0fw&s' alt="Logo">
+        <h1>Sign Up</h1>
+        
+        <label for="first-name">First Name</label>
+        <input id="first-name" placeholder='Enter your first name' type='text' required>
 
-<p>Password must be atleast 8 charaters</p>
-<label>Birthday</label>
+        <label for="last-name">Last Name</label>
+        <input id="last-name" placeholder='Enter your last name' type='text' required>
 
-<input class='Month' type='text' placeholder='Month'>
-<input class='Day' type='number'  placeholder='Day'>
-<input class='Year' type='number'  placeholder='Year'>
+        <label for="username">Username</label>
+        <input id="username" placeholder='Enter your username' type='text' required>
 
-<p class='accept'>By tapping Sign Up & Accept, you acknowledge that you have read the <a href='#'>Privacy Policy</a> and agree to the <a href='#'>Terms of Service.</a> Snapchatters can always capture or save your messages, such as by taking a screenshot or using a camera. Be mindful of what you Snap!</p>
+        <label for="email">Email</label>
+        <input id="email" placeholder='Enter your email' type='email' required>
 
-<button>Sign up and accept</button>
-<p class='already'>Already have an account?  <a href='#' class='down'>Log In</a> Are you an advertiser? <a class='down' href=''#>Click Here</a></p>
-</form>
+        <label for="password">Password</label>
+        <input id="password" placeholder='Enter your password' type='password' required>
+        <p>Password must be at least 8 characters</p>
 
+        <label>Birthday</label>
+        <input class='month' type='text' placeholder='Month' required>
+        <input class='day' type='number' placeholder='Day' required min="1" max="31">
+        <input class='year' type='number' placeholder='Year' required min="1900" max="2023">
 
+        <p>By tapping Sign Up & Accept, you acknowledge that you have read the <a href='#'>Privacy Policy</a> and agree to the <a href='#'>Terms of Service</a>.</p>
+        
+        <div class="button-container">
+            <button type="submit">Sign Up and Accept</button>
+        </div>
+        
+        <p class='already'>Already have an account? <a href='#' class='down'>Log In</a> Are you an advertiser? <a class='down' href='#'>Click Here</a></p>
+    </form>
 </body>
 </html>
